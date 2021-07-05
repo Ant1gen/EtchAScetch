@@ -1,16 +1,14 @@
 #container {
-    width:min-content; 
+    width:840px; 
+    height: 840px;
     background-color: bisque;
     display: grid;
-    grid-template-columns: repeat(16, 50px);
-    grid-template-rows: repeat(16, 50px);
-    grid-gap: 2px;
-    
-    
+    grid-template-columns: repeat(16, auto);
+    grid-template-rows: repeat(16, auto);
+    grid-gap: 1px;
 }
 
 .etch {
-    
     background : grey; 
-    
 }
+
