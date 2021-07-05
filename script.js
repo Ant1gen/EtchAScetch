@@ -1,11 +1,40 @@
 let container = document.getElementById("container");
 let button = document.getElementById("reset");
 
+function changeColor(){
+    let color = this.style.backgroundColor;
+    console.log(color);
+    switch (color) {
+        case 'red':
+            this.setAttribute('style', 'background : orange');
+            break;
+        case 'orange':
+            this.setAttribute('style', 'background : yellow');
+            break;
+        case 'yellow':
+            this.setAttribute('style', 'background : green');
+            break;
+        case 'green':
+            this.setAttribute('style', 'background : blue');
+            break;
+        case 'blue':
+            this.setAttribute('style', 'background : violet');
+            break;
+        case 'violet':
+            this.setAttribute('style', 'background : red');
+            break;
+        default:
+            this.setAttribute('style', 'background : red');
+            break;
+    }
+    
+}
+
 function addDiv() {
     let div = document.createElement('div');
     div.classList.add('etch');
     container.appendChild(div);
-    div.addEventListener('mouseover', () => {div.setAttribute('style', 'background : black')});
+    div.addEventListener('mouseover', changeColor);
 }
 function fillGrid(sideSize){
     container.setAttribute('style', `grid-template-columns: repeat(${sideSize}, auto); grid-template-rows: repeat(${sideSize}, auto);`)
