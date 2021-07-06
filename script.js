@@ -3,7 +3,6 @@ let button = document.getElementById("reset");
 
 function changeColor(){
     let color = this.style.backgroundColor;
-    console.log(color);
     switch (color) {
         case 'red':
             this.setAttribute('style', 'background : orange');
